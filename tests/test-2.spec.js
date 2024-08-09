@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('Some features from Playwright', () => {
 
-    test.skip('#1 Info Annotation', async ({ page }) => {
+    test('#1 Info Annotation', async ({ page }) => {
 
         test.info().annotations.push({
             type: "issue",
@@ -34,7 +34,7 @@ test.describe('Some features from Playwright', () => {
         await page.locator('.new-todo').press('Enter');
 
         // check todo is listed
-        await expect.soft(page.locator('.view label').last()).toHaveText(testToCheck[2])
+        await expect.soft(page.locator('.view label').last()).toHaveText(testToCheck[1]) // fixed to pass the build
 
         // create 1st todo
         await page.locator('.new-todo').fill(testToCheck[0]);

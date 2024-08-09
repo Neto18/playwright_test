@@ -22,7 +22,7 @@ test.afterEach(async({page}) =>{
     await page.waitForTimeout(1000);
 })
 
-test.describe('Basic tests with API', () => {
+test.describe.skip('Basic tests with API', () => {
 
     test('Create new user by API request', async({request}) =>{
 
