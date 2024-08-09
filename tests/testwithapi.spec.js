@@ -2,7 +2,6 @@
 for this to work the todo-mcv testing-lists should be running
 */
 
-/*
 let randomID = Math.floor((Math.random() * 1000) + 1)
 
 const data = { 
@@ -23,7 +22,7 @@ test.afterEach(async({page}) =>{
     await page.waitForTimeout(1000);
 })
 
-test.describe('Basic tests with API', () => {
+test.describe.skip('Basic tests with API', () => {
 
     test('Create new user by API request', async({request}) =>{
 
@@ -67,5 +66,3 @@ test.describe('Basic tests with API', () => {
 
     })
 })
-
-*/

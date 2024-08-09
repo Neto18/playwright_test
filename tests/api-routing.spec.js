@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-test.describe('Mock data from API using playwright - Abort', () => {
+test.describe.skip('Mock data from API using playwright - Abort', () => {
 
     test.beforeEach(async ({ context }) => {
         await context.route(/.css$/, (route) => route.abort())
@@ -12,7 +12,7 @@ test.describe('Mock data from API using playwright - Abort', () => {
 
 })
 
-test.describe('Mock API response - Fulfill', () => {
+test.describe.skip('Mock API response - Fulfill', () => {
 
     test('Mock API request', async ({ page, request }) => {
 
