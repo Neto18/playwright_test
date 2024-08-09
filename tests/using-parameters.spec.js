@@ -34,7 +34,7 @@ test('Testing using params from project', async({ page }, testInfo) => {
 
 })
 
-test.only('Testing using params from .env file', async({ page }, testInfo) => {
+test('Testing using params from .env file', async({ page }, testInfo) => {
 
     const valueFromDotEnv = testInfo.project.use.env_var
 
