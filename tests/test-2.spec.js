@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test'
 
-test.beforeEach(async({page}) =>{
+test.beforeEach(async ({ page }) => {
     await page.goto('https://demo.playwright.dev/todomvc/#/')
 })
 
-test.describe('Some features from Playwright', () =>{
-    
-    test.skip('#1 Info Annotation', async({page}) => {
+test.describe('Some features from Playwright', () => {
+
+    test.skip('#1 Info Annotation', async ({ page }) => {
 
         test.info().annotations.push({
             type: "issue",
@@ -25,7 +25,7 @@ test.describe('Some features from Playwright', () =>{
     })
 
     // this one is expected to fail, but continue and finish 
-    test('#2 Test Soft Assertions', async({page}) => {
+    test('#2 Test Soft Assertions', async ({ page }) => {
 
         const testToCheck = ['The new todo #1', 'The new todo #2', 'The new todo #3']
 
