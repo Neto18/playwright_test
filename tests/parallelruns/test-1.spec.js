@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-let timeout = 5000;
+let timeout = 2000;
 test('Parallel - Testfile #1 - TC #1 ', async ({ page }) => {
     console.log('parallel - TF #1 - TC #1')
     await page.waitForTimeout(timeout);

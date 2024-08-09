@@ -22,9 +22,9 @@ test.afterEach(async({page}) =>{
     await page.waitForTimeout(1000);
 })
 
-test.describe.skip('Basic tests with API', () => {
+test.describe('Basic tests with API', () => {
 
-    test('Create new user by API request', async({request}) =>{
+    test.skip('Create new user by API request', async({request}) =>{
 
         const createNewTodo = await request.post('/todos', {data})
         expect(createNewTodo.status()).toEqual(201)
@@ -33,7 +33,7 @@ test.describe.skip('Basic tests with API', () => {
 
     })
 
-    test('Get todo by API request', async({request}) => {
+    test.skip('Get todo by API request', async({request}) => {
 
         const getTodos = await request.get('/todos')
         expect(getTodos.status()).toEqual(200)
@@ -42,7 +42,7 @@ test.describe.skip('Basic tests with API', () => {
 
     })
 
-    test('Update a todo by API request', async({request}) => {
+    test.skip('Update a todo by API request', async({request}) => {
 
         const updateTodo = await request.patch('/todos/' + randomID,  {data: completedT})
         expect(updateTodo.status()).toEqual(200)
@@ -53,7 +53,7 @@ test.describe.skip('Basic tests with API', () => {
 
     })
 
-    test('Delete todo via API request', async({request}) => {
+    test.skip('Delete todo via API request', async({request}) => {
 
         const deleteTodo = await request.delete('/todos/' + randomID)
         expect(deleteTodo.status()).toEqual(200)
