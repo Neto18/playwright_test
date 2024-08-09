@@ -2,6 +2,7 @@
 for this to work the todo-mcv testing-lists should be running
 */
 
+/*
 let randomID = Math.floor((Math.random() * 1000) + 1)
 
 const data = { 
@@ -24,7 +25,7 @@ test.afterEach(async({page}) =>{
 
 test.describe('Basic tests with API', () => {
 
-    test.skip('Create new user by API request', async({request}) =>{
+    test('Create new user by API request', async({request}) =>{
 
         const createNewTodo = await request.post('/todos', {data})
         expect(createNewTodo.status()).toEqual(201)
@@ -33,7 +34,7 @@ test.describe('Basic tests with API', () => {
 
     })
 
-    test.skip('Get todo by API request', async({request}) => {
+    test('Get todo by API request', async({request}) => {
 
         const getTodos = await request.get('/todos')
         expect(getTodos.status()).toEqual(200)
@@ -42,7 +43,7 @@ test.describe('Basic tests with API', () => {
 
     })
 
-    test.skip('Update a todo by API request', async({request}) => {
+    test('Update a todo by API request', async({request}) => {
 
         const updateTodo = await request.patch('/todos/' + randomID,  {data: completedT})
         expect(updateTodo.status()).toEqual(200)
@@ -53,7 +54,7 @@ test.describe('Basic tests with API', () => {
 
     })
 
-    test.skip('Delete todo via API request', async({request}) => {
+    test('Delete todo via API request', async({request}) => {
 
         const deleteTodo = await request.delete('/todos/' + randomID)
         expect(deleteTodo.status()).toEqual(200)
@@ -66,3 +67,5 @@ test.describe('Basic tests with API', () => {
 
     })
 })
+
+*/
